@@ -1,8 +1,12 @@
-# React + Vite
+React Counter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React Counter App is a simple project that demonstrates the use of state management in React using the useState hook. The app allows you to increment, decrement, and reset a counter.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Learnings
+Through this project, I have gained a better understanding of the following concepts:
+
+React State Management: Utilizing the useState hook to manage and update state within a functional component.
+Event Handling: Handling user interactions through button clicks and updating the state accordingly.
+Component Structure: Building a simple React component structure for a counter application.
