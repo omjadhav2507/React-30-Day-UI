@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserCard from './UserCard';
 import UserProfile from './UserProfile';
+import UserProjects from './UserProjects';
 
 function App() {
   const [input, setInput] = useState("omjadhav2507");
@@ -14,15 +15,23 @@ function App() {
   }
 
   async function fetchGitData() {
+    const accessToken = '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';
+    
     try {
-      const res = await fetch(`https://api.github.com/users/${input}`);
-      const data = await res.json();
-  
-      if (data) {
-        setUserData(data);
+      const res = await fetch(`https://api.github.com/users/${input}`, {
+        headers: {
+          Authorization: `token ${accessToken}`
+        }
+      });
+    
+      if (res.ok) {
+        const user = await res.json();
+        setUserData(user); 
+      } else {
+        console.error('Failed to fetch user data:', res.status);
       }
     } catch (error) {
-      console.error('Error fetching GitHub data:', error);
+      console.error('Error fetching user data:', error);
     }
   } 
 
@@ -42,7 +51,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<UserCard userData={userData} />} />
-          <Route path='/profile' element={<UserProfile />} />
+          <Route path='/profile' element={<UserProfile userData={userData} />}/>
+         
         </Routes>
       </Router>
     </div>
