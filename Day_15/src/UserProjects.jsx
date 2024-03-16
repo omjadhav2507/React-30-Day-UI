@@ -5,7 +5,7 @@ function UserProjects({ userData }) {
   const [recentCommit, setRecentCommit] = useState(null);
   const [repositoryActivity, setRepositoryActivity] = useState([]);
 
-  const accessToken = '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';
+  const accessToken = '';
 
   const fetchProjects = async () => {
     try {

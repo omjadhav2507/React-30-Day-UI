@@ -15,7 +15,7 @@ function App() {
   }
 
   async function fetchGitData() {
-    const accessToken = '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';
+    const accessToken = '';
     
     try {
       const res = await fetch(`https://api.github.com/users/${input}`, {
