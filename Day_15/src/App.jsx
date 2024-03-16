@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserCard from './UserCard';
 import UserProfile from './UserProfile';
-import UserProjects from './UserProjects';
+
 
 function App() {
   const [input, setInput] = useState("omjadhav2507");
