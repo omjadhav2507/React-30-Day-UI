@@ -1,5 +1,6 @@
 import React from 'react'
 import UserProjects from './UserProjects'
+import ContributionGraph from './ContributionGraph'
 
 function UserProfile({ userData }) {
 console.log(userData)
@@ -15,6 +16,7 @@ console.log(userData)
         </div>
         <div>
             <UserProjects userData = {userData}/>
+            <ContributionGraph userData = {userData}/>
         </div>
     </>
   )
